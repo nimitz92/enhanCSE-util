@@ -34,7 +34,7 @@ class NotificationCreateContext implements ContextService {
 		$nname = $conn->escape($model['nname']);
 		$ndesc = $conn->escape($model['ndesc']);
 		
-		$nid = $model['nid'];		
+		$nid = $model['gid'];		
 		$result = $conn->getResult("insert into notifications (nid, nname, ndescription) values ($nid, '$nname', '$ndesc');", true);
 		
 		if($result === false){
